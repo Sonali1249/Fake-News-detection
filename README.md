@@ -120,6 +120,18 @@ You can deploy this project for free on [Streamlit Cloud](https://streamlit.io/c
 3. **Submit**: Click the "Submit" or "Predict" button.
 4. **View Results**: The application will display whether the news is **Real** or **Fake** along with a confidence score.
 
+## Sample News for Testing
+
+You can use these examples to test the application:
+
+### Example 1: Real News 📰
+- **Title**: NASA's James Webb Telescope Captures Stunning Image of Distant Galaxy
+- **Content**: The James Webb Space Telescope has provided its latest high-resolution image, revealing intricate details of a galaxy billions of light-years away. NASA scientists say this data will help understand the early formation of the universe.
+
+### Example 2: Fake News 📰
+- **Title**: Scientists Discover Secret Island Where Dinosaurs Still Exist
+- **Content**: A team of undercover explorers has reportedly found a hidden island in the Pacific Ocean where prehistoric dinosaurs are still alive and roaming freely. The government is allegedly keeping this a secret from the public.
+
 ## Statistics
 
 You can also view the dataset statistics by navigating to `http://127.0.0.1:5000/statistics`, which shows the distribution of real vs. fake news articles in the training dataset.
