@@ -1,4 +1,5 @@
 # Fake News Detection using Machine Learning
+**Made by Sonali Tiwari**
 
 ## Introduction
 This repository contains a comprehensive project for detecting fake news using machine learning techniques and various natural language processing techniques. The project includes data analysis, model training, and a web application for real-time fake news detection. The machine learning model is designed to classify news articles as either real or fake based on their content.
@@ -32,6 +33,96 @@ A full training dataset with the following attributes:
 
 ### test.csv
 A testing training dataset with all the same attributes as `train.csv` without the label.
+
+## Installation
+
+To run this project, you need to have Python installed on your system. Follow these steps to set up the project:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Sonali1249/Fake-News-detection.git
+   cd Fake-News-detection
+   ```
+
+2. **Create a virtual environment** (Optional but recommended):
+   ```bash
+   python -m venv venv
+   # On Windows
+   .\venv\Scripts\activate
+   # On macOS/Linux
+   source venv/bin/activate
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Download NLTK Data**:
+   The project uses NLTK for text processing. You may need to download the necessary datasets by running:
+   ```python
+   import nltk
+   nltk.download('stopwords')
+   nltk.download('wordnet')
+   nltk.download('punkt')
+   ```
+
+## How to Run
+
+1. **Start the Flask Application**:
+   Run the following command in your terminal:
+   ```bash
+   python app.py
+   ```
+
+2. **Access the Web App**:
+   Once the server is running, open your web browser and navigate to:
+   ```
+   http://127.0.0.1:5000
+   ```
+
+## How to Run with Streamlit
+
+Streamlit provides a very clean and modern UI. To run the Streamlit version:
+
+1. **Start the Streamlit App**:
+   Run the following command in your terminal:
+   ```bash
+   streamlit run streamlit_app.py
+   ```
+
+2. **Access the App**:
+   The app will automatically open in your default browser, usually at `http://localhost:8501`.
+
+## How to Deploy on Streamlit Cloud
+
+You can deploy this project for free on [Streamlit Cloud](https://streamlit.io/cloud) by following these steps:
+
+1. **GitHub Setup**:
+   - Push your code to your GitHub repository: `https://github.com/Sonali1249/Fake-News-detection.git`.
+   - Ensure `requirements.txt`, `streamlit_app.py`, `model.pkl`, and `vector.pkl` are in the root directory.
+
+2. **Streamlit Cloud**:
+   - Log in to Streamlit Cloud and click **"New app"**.
+   - Select your repository and the main branch.
+   - Set the main file path to `streamlit_app.py`.
+   - Click **"Deploy!"**.
+
+3. **NLTK Handling**:
+   The `streamlit_app.py` script is designed to automatically download the necessary NLTK data upon startup, so no extra configuration is needed for the NLTK datasets on Streamlit Cloud.
+
+## How to Check Fake News
+
+1. **Navigate to the Prediction Page**: Click on the "Predict" link or button on the home page.
+2. **Enter News Details**:
+   - **Title**: Enter the headline of the news article.
+   - **News Content**: Paste the main text of the article.
+3. **Submit**: Click the "Submit" or "Predict" button.
+4. **View Results**: The application will display whether the news is **Real** or **Fake** along with a confidence score.
+
+## Statistics
+
+You can also view the dataset statistics by navigating to `http://127.0.0.1:5000/statistics`, which shows the distribution of real vs. fake news articles in the training dataset.
 
 ## Model Name
 The machine learning model used for fake news detection in this project is the **Passive Aggressive Classifier**.
